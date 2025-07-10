@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Tools - Pro Edition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Download YouTube thumbnails and generate perfect tags and hashtags easily.">
+  <meta name="keywords" content="YouTube thumbnail downloader, tag generator, hashtag generator, video tools">
+  <meta name="author" content="Your Name">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>📽️ YouTube Tools - Pro Edition</h1>
+    <p>Smart tools for creators: Download thumbnails, generate tags & hashtags.</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab('thumb')">📸 Thumbnail Downloader</button>
+    <button class="tab-button" onclick="openTab('tags')">🏷️ Tag Generator</button>
+  </div>
+
+  <div class="tab-content active" id="thumb">
+    <h2>Download YouTube Thumbnail</h2>
+    <input type="text" id="youtubeUrl" placeholder="Enter YouTube Video URL">
+    <select id="quality">
+      <option value="maxresdefault">Max Resolution (HD)</option>
+      <option value="sddefault">Standard (SD)</option>
+      <option value="hqdefault">High Quality</option>
+      <option value="mqdefault">Medium Quality</option>
+      <option value="default">Low Quality</option>
+    </select>
+    <button onclick="getThumbnail()">Fetch Thumbnail</button>
+    <div class="result">
+      <img id="thumbnail" src="" alt="Thumbnail Preview">
+      <a id="downloadBtn" href="#" download="thumbnail.jpg">⬇️ Download</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="tags">
+    <h2>Generate Tags & Hashtags</h2>
+    <input type="text" id="topicInput" placeholder="Enter your video topic (e.g., Make Money Online)">
+    <button onclick="generate()">Generate</button>
+    <div class="result">
+      <h3>Suggested Tags:</h3>
+      <div id="tags" class="tag-box"></div>
+      <h3>Hashtags:</h3>
+      <div id="hashtags" class="tag-box"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 YouTubeTools. Made for creators ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
