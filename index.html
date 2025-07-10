@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Tools Pro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider round"></span>
+    </label>
+    <span>Dark Mode</span>
+  </div>
+
+  <div class="container">
+    <h1>YouTube Thumbnail Downloader</h1>
+    <input type="text" id="videoIdInput" placeholder="Enter YouTube Video ID" />
+    <select id="qualitySelect">
+      <option value="maxresdefault">Max Resolution</option>
+      <option value="sddefault">Standard</option>
+      <option value="hqdefault">High Quality</option>
+    </select>
+    <button onclick="downloadThumbnail()">Download Thumbnail</button>
+    <div id="loader" class="loader" style="display:none;"></div>
+    <div id="thumbnailResult"></div>
+
+    <hr />
+
+    <h2>Tag Generator</h2>
+    <input type="text" id="tagInput" placeholder="Enter video title or keywords" />
+    <button onclick="generateTags()">Generate Tags</button>
+    <div id="tagsResult"></div>
+    <button class="copy-btn" onclick="copyToClipboard('tagsResult')">Copy Tags</button>
+
+    <h2>Hashtag Generator</h2>
+    <button onclick="generateHashtags()">Generate Hashtags</button>
+    <div id="hashtagsResult"></div>
+    <button class="copy-btn" onclick="copyToClipboard('hashtagsResult')">Copy Hashtags</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
